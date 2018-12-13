@@ -1,0 +1,30 @@
+{
+  "name": "yuandaqh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/module-alias": "^2.0.0",
+    "@types/source-map-support": "^0.4.1",
+    "express": "^4.16.4",
+    "module-alias": "^2.1.0",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miceytang/yuandaqh.git"
+  },
+  "keywords": [
+    "远大期货"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miceytang/yuandaqh/issues"
+  },
+  "homepage": "https://github.com/miceytang/yuandaqh#readme"
+}
