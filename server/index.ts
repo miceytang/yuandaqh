@@ -18,22 +18,14 @@ import compression from 'compression';
 import timeoutHandler from './middlewares/timeout-handler';
 import formatHandler from './middlewares/deploy-response-format';
 import errorHandler from './middlewares/error-handle';
-import reportCgiHandler from './middlewares/report-cgi-handler';
 import router from './router';
 
 const app = express();
-const logger = plug('logger');
 
 // 全局捕获未处理的错误
 process.on('uncaughtException', function(err) {
-  logger.error('Uncaught exception:\n', err.stack);
   process.exit(1);
 });
-
-// 隐藏 response header 中的 x-powered-by
-app.disable('x-powered-by');
-// 去掉 etag
-app.set('etag', false);
 
 // 设置模板引擎
 app.engine('html', require('ejs').__express);
@@ -55,7 +47,7 @@ app.use(compression());
  * 2. 回包格式化中间件：部署请求 resolve | reject 方法
  * 3. 数据上报中间件：统计 cgi 从开始接受请求到响应完成的耗时，对错误的信息进行上报
  **/
-app.all(`${baseUrl}/*`, timeoutHandler, formatHandler, reportCgiHandler);
+app.all(`${baseUrl}/*`, timeoutHandler, formatHandler);
 
 // 路由挂载
 app.use(router);
