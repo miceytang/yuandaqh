@@ -5,8 +5,6 @@ sourceMap.install();
 // 模块路径解s析
 require('module-alias/register');
 
-// 设置当前的 process.env.NODE_ENV
-import './config/env';
 import { baseUrl } from './config/index';
 import express from 'express';
 import path from 'path';
@@ -47,7 +45,7 @@ app.use(compression());
  * 2. 回包格式化中间件：部署请求 resolve | reject 方法
  * 3. 数据上报中间件：统计 cgi 从开始接受请求到响应完成的耗时，对错误的信息进行上报
  **/
-app.all(`${baseUrl}/*`, timeoutHandler, formatHandler);
+// app.all(`${baseUrl}/*`, timeoutHandler, formatHandler);
 
 // 路由挂载
 app.use(router);
@@ -56,4 +54,5 @@ app.use(router);
 // 处理 系统错误 | 服务器未知错误 | 请求逻辑错误
 app.use(errorHandler);
 
-export default app;
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
+// export default app;

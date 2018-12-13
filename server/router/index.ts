@@ -12,7 +12,8 @@ const Router: express.Router = express.Router();
 
 /* --------- path: '/cgi-bin/*' --------- */
 Router.use(baseUrl, CGI_ROUTERS);
-/* --------- path: '/mqq/views/*' --------- */
+/* --------- path: '/views/*' --------- */
+// Router.use(baseRenderUrl, RENDER_ROUTERS);
 Router.use(baseRenderUrl, RENDER_ROUTERS);
 
 /* --------- 404处理 --------- */
