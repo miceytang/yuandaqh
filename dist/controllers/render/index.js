@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Render {
     static render(req, res, next) {
-        console.log('rettrte');
         let path = req.path;
         console.log(path);
         let filePath = path.substring(1, path.length);

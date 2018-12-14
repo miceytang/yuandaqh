@@ -6,7 +6,6 @@ export default class Render {
     res: express.Response,
     next: express.NextFunction
   ) {
-    console.log('rettrte');
     let path = req.path;
     console.log(path);
     let filePath = path.substring(1,path.length);

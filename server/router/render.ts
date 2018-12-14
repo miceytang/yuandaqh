@@ -7,6 +7,6 @@ const Router: express.Router = express.Router();
 
 /* --------- path: '/(:page).html' --------- */
 
-Router.get('/', Render.render.bind(Render));
+Router.get('*', Render.render.bind(Render));
 
 export default Router;

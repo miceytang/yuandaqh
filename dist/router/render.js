@@ -8,6 +8,6 @@ const express_1 = __importDefault(require("express"));
 const render_1 = __importDefault(require("@controllers/render"));
 const Router = express_1.default.Router();
 /* --------- path: '/(:page).html' --------- */
-Router.get('/', render_1.default.render.bind(render_1.default));
+Router.get('*', render_1.default.render.bind(render_1.default));
 exports.default = Router;
 //# sourceMappingURL=render.js.map
