@@ -288,4 +288,22 @@ a {
     padding: 0 20px 30px;
     margin-top: 20px; } }
 
+
+    .qqmiddle{
+      width:256px;
+      height:315px
+    }
+
+    /* 客服窗口 */
+    .wpa-invite {width: 258px;height: 318px;border-radius: 4px;border: 1px solid #dadee7;position: relative;text-align: center;background: #fff;margin-left: 40%}
+    .icon-close {position: absolute;right: -2px;top: -2px;z-index: 10;}
+    .icon-close {position: absolute;right: -2px;top: -2px;z-index: 1000;}
+    .avatar {margin:0 auto;width: 120px;height: 120px;border-radius: 50%;position: absolute;top: 30px;left:70px;}.main {position: relative;top: 166px;}
+    .title {font-size: 24px;color: #1e2330;}.content {font-size: 16px;color: #777;margin-top: 6px;}
+    .btns {position: absolute;left: 0;bottom: 0;width: 100%;height: 54px;line-height: 54px;color: #fff;}
+    .icon-im {margin-top:-1px;display: inline-block;width: 24px;height: 24px;background: url("https://bqq.gtimg.com/qidian/src/wpa/dist/4.1.0/images/invite/im-bubble-pc-white.png") no-repeat;}.icon-qq {margin-top:0px;display: inline-block;width: 24px;height: 24px;background: url("https://bqq.gtimg.com/qidian/src/wpa/dist/4.1.0/images/invite/icon-qq-white-small.png") no-repeat;}.btn-icon {margin-right: 7px;vertical-align: middle;}
+    .btn-text { margin-top: 11px; color: #fff; display:inline-block;}.btn {position:relative;top:-1px;font-size: 16px;cursor: pointer;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;height: 54px;}.btn:last-child {display: none;}.btn:first-child {display: block;}.multi-btn .btn {display: inline-block;width: 128.5px;}.multi-btn .btn:first-child {float: left;border-bottom-left-radius: 4px;border-bottom-right-radius: 0;}.multi-btn .btn:last-child {float: right;border-bottom-left-radius: 0;border-bottom-right-radius: 4px;}.theme-1 .btn {background: #0067ed;}.theme-2 .btn {background: #12b7f5;}.theme-3 .btn {background: #ff9232;}.theme-4 .btn {background: #ee685d;}.theme-5 .btn {background: #25cd98;}
+  
+
 /*# sourceMappingURL=common.css.map */
+
