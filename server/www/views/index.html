@@ -10,12 +10,12 @@
 <meta name="author" content="laomo" />
 <meta name="applicable-device"content="pc,mobile">
 <link href="/static/css/bootstrap.css" rel="stylesheet">
-<link href="/static/css/bxslider.css" rel="stylesheet">
 <link href="/static/css/style.css" rel="stylesheet">
+<link href="/static/css/swiper.min.css" rel="stylesheet">
 <script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/bxslider.min.js"></script>
 <script src="/static/js/common.js"></script>
 <script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/swiper.min.js"></script>
 <!--[if lt IE 9]>
 	  <script src="/static/js/html5shiv.min.js"></script>
 	  <script src="/static/js/respond.min.js"></script>
@@ -98,25 +98,27 @@
   </div>
 </nav>
  </header>
- 
 
-<!-- bxslider -->
-<div class="flash">
-  <ul class="bxslider">
-    <li><a href="/views/a/huandeng/49.html"><img src="/static/images/1-1G030151AQ11.png" alt="幻灯3" /></a></li>
-<li><a href="/views/a/huandeng/48.html"><img src="/static/images/1-1G03015162bP.png" alt="幻灯2" /></a></li>
-<li><a href="/views/a/huandeng/47.html"><img src="/static/images/1-1G0301516043Z.png" alt="幻灯1" /></a></li>
-
-  </ul>
+<div class="swiper-container" style="width:100%">
+  <div class="swiper-wrapper" style="width:100%">
+    <div class="swiper-slide" style="width:100%"><img style="width:100%" src="/static/images/1-1G030151AQ11.png" alt="幻灯1"/></div>
+    <div class="swiper-slide" style="width:100%"><img style="width:100%" src="/static/images/1-1G03015162bP.png" alt="幻灯2" /></div>
+    <div class="swiper-slide" style="width:100%"><img style="width:100%" src="/static/images/1-1G0301516043Z.png" alt="幻灯3" /></div>
+  </div>
+  <div class="swiper-pagination"></div>
 </div>
-<script type="text/javascript">
-        $('.bxslider').bxSlider({
-          adaptiveHeight: true,
-          infiniteLoop: false,
-          hideControlOnEnd: true,
-          auto:true
-        });
-    </script>
+
+<script  type="text/javascript" language="javascript">
+  var mySwiper = new Swiper('.swiper-container', {
+    autoplay: true,//可选选项，自动滑动
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })
+  </script>
+<div style="position:fixed;top:30%;right:5px;z-index: 100">
+  <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2249910100&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2::53" alt="立即咨询" title="立即咨询"/></a> -->
+  <img style="CURSOR: pointer" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=744620679 &o=yuandaqh.com.cn&q=7', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" src="http://pub.idqqimg.com/wpa/images/counseling_style_53.png" alt="立即咨询"></div>
 <div class="about_bg">
   <div class="container">
     <div class="row">
@@ -232,8 +234,11 @@
   </div>
 </footer>
 <!-- WPA start -->
-<script id="qd285215368155648fd2d6abc35519c2b5f0bdd8367e" src="https://wp.qiye.qq.com/qidian/2852153681/55648fd2d6abc35519c2b5f0bdd8367e" charset="utf-8" async defer></script>
+<!-- <script id="qd285215368155648fd2d6abc35519c2b5f0bdd8367e" src="https://wp.qiye.qq.com/qidian/2852153681/55648fd2d6abc35519c2b5f0bdd8367e" charset="utf-8" async defer></script> -->
+<!-- <script id="qd285215368155648fd2d6abc35519c2b5f0bdd8367e" src="/static/js/qq.js" charset="utf-8" async defer></script> -->
 <!-- WPA end -->
+
+
 <script>
 (function(){
     var bp = document.createElement('script');
