@@ -8,7 +8,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("@config/index");
-const CONSTANT = __importStar(require("./retCode"));
+const CONSTANT = __importStar(require("./retcode"));
 class BaseError extends Error {
 }
 exports.BaseError = BaseError;

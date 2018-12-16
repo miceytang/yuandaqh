@@ -3,7 +3,7 @@ import express from 'express';
 import { Response } from '@middlewares/deploy-response-format';
 import { baseRenderUrl, baseUrl } from '@config/index';
 
-import * as CONSTANT from './retCode';
+import * as CONSTANT from './retcode';
 
 
 export class BaseError extends Error {
