@@ -73,12 +73,12 @@ $(document).ready(function(){
           $(this).html(spantext).addClass("current").next("ul.menu_body").slideToggle(300).siblings("ul.menu_body");
       });
 
-      var wapTime = setTimeout(function(){
+      var wapTime = setInterval(function(){
         wpaDisplay = $('.wpa-invite').css('display');
         if(wpaDisplay == 'none'){
           $('.wpa-invite').css('display','block');
         }
-      },100);
+      },1000 * 60);
 
       $('#invite_close').click(function(){
         $('.wpa-invite').css('display','none');
