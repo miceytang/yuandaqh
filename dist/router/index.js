@@ -10,13 +10,13 @@ const express_1 = __importDefault(require("express"));
 const index_1 = require("@config/index");
 const error_handle_1 = require("@middlewares/error-handle");
 const retcode_1 = require("@middlewares/error-handle/retcode");
-const router_1 = __importDefault(require("./router"));
 const render_1 = __importDefault(require("./render"));
 const Router = express_1.default.Router();
 /* --------- path: '/cgi-bin/*' --------- */
-Router.use(index_1.baseUrl, router_1.default);
+// Router.use(baseUrl, CGI_ROUTERS);
 /* --------- path: '/views/*' --------- */
 // Router.use(baseRenderUrl, RENDER_ROUTERS);
+// Router.get('/','views/index.html');
 Router.use(index_1.baseRenderUrl, render_1.default);
 /* --------- 404处理 --------- */
 Router.use((req, res, next) => {

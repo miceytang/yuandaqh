@@ -11,9 +11,10 @@ import RENDER_ROUTERS from './render';
 const Router: express.Router = express.Router();
 
 /* --------- path: '/cgi-bin/*' --------- */
-Router.use(baseUrl, CGI_ROUTERS);
+// Router.use(baseUrl, CGI_ROUTERS);
 /* --------- path: '/views/*' --------- */
 // Router.use(baseRenderUrl, RENDER_ROUTERS);
+// Router.get('/','views/index.html');
 Router.use(baseRenderUrl, RENDER_ROUTERS);
 
 /* --------- 404处理 --------- */
