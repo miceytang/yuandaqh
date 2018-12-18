@@ -8,19 +8,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
  **/
 const express_1 = __importDefault(require("express"));
 const index_1 = require("@config/index");
-const error_handle_1 = require("@middlewares/error-handle");
-const retcode_1 = require("@middlewares/error-handle/retcode");
 const render_1 = __importDefault(require("./render"));
 const Router = express_1.default.Router();
 /* --------- path: '/cgi-bin/*' --------- */
 // Router.use(baseUrl, CGI_ROUTERS);
 /* --------- path: '/views/*' --------- */
 // Router.use(baseRenderUrl, RENDER_ROUTERS);
-// Router.get('/','views/index.html');
 Router.use(index_1.baseRenderUrl, render_1.default);
 /* --------- 404处理 --------- */
 Router.use((req, res, next) => {
-    return next(error_handle_1.generateErr(retcode_1.NOT_FOUND, `访问 CGI 不存在！PATH 为 ${req.originalUrl}。`));
+    res.redirect('http://yuandaqh.com.cn/views/index.html');
+    // return next(
+    //   generateErr(NOT_FOUND, `访问 CGI 不存在！PATH 为 ${req.originalUrl}。`)
+    // );
 });
 exports.default = Router;
 //# sourceMappingURL=index.js.map
