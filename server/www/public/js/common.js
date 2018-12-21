@@ -78,7 +78,7 @@ $(document).ready(function(){
         if(wpaDisplay == 'none'){
           $('.wpa-invite').css('display','block');
         }
-      },1000 * 60);
+      },1000*10);
 
       $('#invite_close').click(function(){
         $('.wpa-invite').css('display','none');
