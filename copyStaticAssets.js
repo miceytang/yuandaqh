@@ -10,7 +10,7 @@ shell.mkdir('-p', 'dist');
 /* 执行 copy 操作 */
 
 // 复制 proto 目录下的所有文件
-shell.cp('-r', 'server/proto', 'dist/');
+// shell.cp('-r', 'server/proto', 'dist/');
 
 // 复制 www 目录下的所有文件
 shell.cp('-R', 'server/www', 'dist/');
