@@ -1,29 +1,69 @@
-function recalc(x,bol) {
-	var clientWidth = document.body.clientWidth;
-
-	if (bol && (!clientWidth || clientWidth > x)) {
-		document.documentElement.style.fontSize = "";
-		return;
-	};
-	document.documentElement.style.fontSize = 100 * (clientWidth / x) + 'px';
-};
-var remCompute = function (width,device) {
-	if (window.addEventListener) {
-		recalc(width,device);
-		var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-		window.addEventListener(resizeEvt, function () {recalc(width,device)}, false);
-	};
-};
-
-
-// NOTE:
-	// htmlÒ³ÃæbodyÏÂµÄ×îÉÏ·½ÒýÈë·½·¨
-	// width: Ô¤Éè¿í¶È/Ô¤ÉèÏìÓ¦µÄÊ±»ú;
-	// device:true(pc)   false(mobile)
-	// =tureÊ±  **pc×öÏìÓ¦Ê½Ê±Ö»ÓÐÔÚÐ¡ÓÚwidthÊ±²Å¼ÆËã**
-	// =falseÊ±  **mobile¶ËËæÊ±¶¼½øÐÐ¼ÆËã**
-
-
-// ·½·¨: remCompute(640,false);
-// »»Ëã·½·¨: 100px = 1rem; ÀýÈç20px = 0.2rem;
+function recalc(x,bol) {
+
+	var clientWidth = document.body.clientWidth;
+
+
+
+	if (bol && (!clientWidth || clientWidth > x)) {
+
+		document.documentElement.style.fontSize = "";
+
+		return;
+
+	};
+
+	document.documentElement.style.fontSize = 100 * (clientWidth / x) + 'px';
+
+};
+
+var remCompute = function (width,device) {
+
+	if (window.addEventListener) {
+
+		recalc(width,device);
+
+		var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		window.addEventListener(resizeEvt, function () {recalc(width,device)}, false);
+
+	};
+
+};
+
+var layOut = function(){
+	var layOut = document.getElementById('layui-layer1');
+	layOut.style.display = "block"
+	
+}
+// var setRed = function(){
+// 	document.getElementById('openNow').style.backgroundColor = '#cb0f0a'
+// }
+var layClose = function(){
+	var layOut = document.getElementById('layui-layer1');
+	layOut.style.display = "none"
+}
+
+
+
+
+// NOTE:
+
+	// htmlÒ³ï¿½ï¿½bodyï¿½Âµï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ë·½ï¿½ï¿½
+
+	// width: Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½/Ô¤ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ê±ï¿½ï¿½;
+
+	// device:true(pc)   false(mobile)
+
+	// =tureÊ±  **pcï¿½ï¿½ï¿½ï¿½Ó¦Ê½Ê±Ö»ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½widthÊ±ï¿½Å¼ï¿½ï¿½ï¿½**
+
+	// =falseÊ±  **mobileï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½**
+
+
+
+
+
+// ï¿½ï¿½ï¿½ï¿½: remCompute(640,false);
+
+// ï¿½ï¿½ï¿½ã·½ï¿½ï¿½: 100px = 1rem; ï¿½ï¿½ï¿½ï¿½20px = 0.2rem;
+
 
