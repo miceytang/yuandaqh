@@ -20,6 +20,8 @@
 		<link rel="stylesheet" type="text/css" href="/static/kaihu/css/float.css" tppabs="/static/kaihu/css/float.css" />
 		<link rel="stylesheet" type="text/css" href="/static/kaihu/css/animate.css" tppabs="/static/kaihu/css/animate.css" />
 		<link rel="stylesheet" type="text/css" href="/static/kaihu/css/lp253.css" tppabs="/static/kaihu/css/lp253.css" />
+		<link rel="stylesheet" type="text/css" href="/static/kaihu/css/hovertreebottom.css" tppabs="/static/kaihu/css/lp253.css" />
+
 	</head>
 
 	<body>
@@ -31,7 +33,7 @@
 		<script src="/static/kaihu/js/jquery.min.js" tppabs="/static/kaihu/js/jquery.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="/static/kaihu/css/ft.css" tppabs="/static/kaihu/css/ft.css" />
 			<!-- 表单 -->
-			<div class="layui-layer layui-layer-page layer-reset" id="layui-layer1" type="page" times="1" showtime="0" contype="string" style="z-index: 19891015; width: 300px; height: 310px; top: 50px; left: 224px;">
+			<!-- <div class="layui-layer layui-layer-page layer-reset" id="layui-layer1" type="page" times="1" showtime="0" contype="string" style="z-index: 19891015; width: 300px; height: 310px; top: 50px; left: 224px;">
 					<div class="layui-layer-title" style="cursor: move;">免费开户</div>
 					<div id="" class="layui-layer-content" style="height: 267px;">
 						<div class="pop" id="pop">
@@ -53,8 +55,61 @@
 						<span class="layui-layer-setwin" onclick="layClose();">
 							<a class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;"></a>
 						</span><span class="layui-layer-resize"></span>
-					</div>
-		<div class="tjtop">
+			</div> -->
+		<!-- 微信 -->
+		<div class="wxc" >
+        <div class="topTips showTip wxc">
+            <div class="tipsInner" >
+                <a  href="javascript:;" class="JS-SWT-LINK"> 
+					<span></span>
+		      </a>
+			    <dl>
+			      <a  href="javascript:;"><strong>微信</strong>&nbsp;现在</a>
+			      <a  href="javascript:;"> 期货投资交流圈邀您加入！</a>
+			    </dl>
+		
+			</div>
+        </div>
+		 </div>
+        <div class="tc" style="display: none;">
+            <img src="/static/kaihu/images/tc.png" class="pic">
+            <div class="wxh">yzy5684</div>
+            <a class="zi" href="weixin://" style="color:#fff6e4">点击去微信邀您进群</a>
+            <p class="close">x</p>
+				</div>
+
+				<!-- 弹窗 -->
+				<div id="wht" >
+						<div class="wht">
+								<div class="whtbg"></div>
+								<div class="whtc">
+										<img src="/static/kaihu/images/tc.jpg" alt="">
+										<div class="whtcc">
+												<div class="whtc1">
+														<span>
+										<img src="/static/kaihu/images/btn_bg.png" style="width: 100%">
+															<code class="wxnumber"> ran930109 </code>
+														</span>
+													<buttom id="copyBtnId" class="btn wx_num_copy" data-clipboard-text="ran930109">复制</buttom>
+												</div>
+												<div class="whtc2">
+														 <div class="whtcc1">
+																<p><em>1</em>点击【复制】，或者长按微信号↑ </p>
+														</div>
+														<div class="whtcc2">
+																<p><em>2</em>进入微信添加好友</p>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="copy">
+						复制成功
+						<br> 去微信搜索添加为好友申请
+				</div>
+				
+			<div class="tjtop">
 			<div class="tjtop-bao">
 				<!--<div class="tjtop-logo">
 			<span>150-2182-9425</span>
@@ -219,4 +274,59 @@
 		<!-- </script> -->
 	
 
-<script language="javascript" src="/static/kaihu/js/lsjs.aspx"></script>
+<!-- <script language="javascript" src="/static/kaihu/js/lsjs.aspx"></script> -->
+<script src="/static/kaihu/jquery-1-8-3-min.js"></script>
+<script src="/static/kaihu/js/clipboard.min.js"></script> 
+
+ <script type="text/javascript">
+   
+  // 微信号  字体大小 自适应
+	
+$(function() {
+    var $WXbtn = $('.wxnumber');
+    $WXbtn.each(function() {
+        var btnL = $(this)[0].innerHTML.length;
+        var fSize = parseInt($(this).css("font-size"));
+        if (btnL > 10) {
+            $(this).css("font-size", (11 / btnL * fSize + "px"))
+        }
+    })
+});
+
+
+    // copy js 代码
+    $(function() {
+        //加载clipboadr.js
+        //.btn 按class绑定功能按钮
+        var clipboard = new Clipboard('.wx_num_copy');
+        //复制成功触发的事件
+        clipboard.on('success', function(e) {
+            //自定义事件区域
+          	window._agl && window._agl.push(['track', ['success', {t: 3}]])
+            $(".copy").fadeIn();
+            setTimeout(function() {
+                $(".copy").fadeOut();
+            }, 2000)
+        });
+        //复制失败触发的事件
+        clipboard.on('error', function(e) {
+            //自定义事件区域
+            // alert('您已复制完成');
+            Clipboard.isSupported()
+        });
+    })
+    // 微信号  字体大小 自适应
+</script>
+   <script type="text/javascript">
+		$(function () {
+				// $(window).bind('beforeunload', function () {
+				//     return '3股或暴涨80%，确定不关注？';
+				// });
+				$(".wxc a,.wxal,.whbut,.free-btn").click(function () {
+						$("#wht").fadeIn();
+				})
+				$(".whtbg,.whtc2 span,").click(function () {
+						$("#wht").fadeOut();
+				})
+		})
+</script>

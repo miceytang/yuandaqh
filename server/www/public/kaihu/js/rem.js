@@ -43,6 +43,12 @@ var layClose = function(){
 	layOut.style.display = "none"
 }
 
+// var wht = function(uin){
+// 	alert('ffdgfrdsg');
+// 	var wht = document.getElementById('wht');
+// 	wht.style.display = "block"
+// }
+
 
 
 

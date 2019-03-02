@@ -98,11 +98,6 @@ background-color:#333; width:80px; height:60px; line-height:60px; color:#FFF; te
  }
 
 
-
-
-.topTips{ display:none;}
-
-
 @media (max-width: 640px) {
 
 .topTips{ display:block;}

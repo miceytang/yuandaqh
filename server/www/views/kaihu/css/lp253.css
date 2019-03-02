@@ -1259,9 +1259,13 @@ a:hover {
 }
 
 /* ============ Responsive ============ */
+@media(min-width: 960px) {
+    html {
 
+        font-size: 100px;
 
-
+    }
+}
 @media(max-width: 1279px) {
 
     html {
@@ -2088,12 +2092,7 @@ a:hover {
 
 
 @media (min-width: 1200px) { 
-
 .dicb{ height:60px;}
 
 }
-
-
-
-
 
