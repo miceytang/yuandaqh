@@ -1,0 +1,436 @@
+.wrapper {
+  width: 1200px !important;
+  margin: auto;
+  font-family: "微软雅黑";
+}
+
+.open-tabs .on {
+  color: #fff;
+}
+
+.open-tabs .li-last {
+  width: 165px;
+}
+
+.step-index {
+  border: 1px solid #c4d4e7;
+  background: #fbfcfe;
+  overflow: hidden;
+  font-size: 14px;
+  padding: 15px 30px 15px;
+  line-height: 1.8;
+  margin-top: 34px;
+  border-radius: 2px;
+}
+
+.open-text {
+  padding-top: 16px;
+  overflow: hidden;
+}
+
+.open-text dl {
+  margin-bottom: 22px;
+  overflow: hidden;
+  _height: 1%;
+}
+
+.open-text dt {
+  display: inline;
+  float: left;
+  width: 120px;
+  font-size: 14px;
+  font-family: simsun, Arial, Helvetica, sans-serif;
+  color: #575757;
+  padding-left: 25px;
+  position: relative;
+  top: 4px;
+}
+
+.open-text dt span {
+  padding-right: 6px;
+}
+
+.open-text dd {
+  margin-left: 120px;
+}
+
+.open-text dd p {
+  color: #a3a3a3;
+  position: relative;
+  margin-left: 6px;
+  top: 6px;
+  float: left;
+}
+
+.open-text .dd-input {
+  border: 1px solid #bebebe;
+  width: 228px;
+  height: 32px;
+  padding: 1px 0 1px 10px;
+  color: #a3a3a3;
+  float: left;
+  line-height: 32px;
+  background: url(../images/Account-4.png) no-repeat;
+}
+
+.CardNo-input {
+  border: 1px solid #bebebe;
+  width: 228px;
+  height: 28px;
+  padding: 1px 0 1px 10px;
+  color: #a3a3a3;
+  vertical-align: middle;
+  line-height: 28px;
+  background: url(../images/Account-4.png) no-repeat;
+}
+
+.open-text .dd-input:hover,
+.CardNo-input:hover {
+  border: 1px solid #366baf;
+  background: #fff no-repeat;
+  font-size: 14px;
+  color: #000;
+}
+
+.asteriskspan {
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+  color: #000;
+  vertical-align: middle;
+}
+
+.open-text .Prompt_right {
+  color: #0e931c;
+  background: url(../images/Account-3.png) no-repeat 0 2px;
+  padding-left: 20px;
+}
+
+.open-text .btn-input {
+  background: url(../images/Account-6.jpg) repeat-x;
+  height: 26px;
+  border: 1px solid #d0d0d0;
+  margin-left: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #7f7f7f;
+  padding: 0 10px;
+  line-height: 24px;
+}
+
+.open-text .prompt-error,
+.open-text .prompt-postback,
+.CardNo-text .prompt-error {
+  border: 1px solid #ffbdbf;
+  background: #ffebec url(../images/Account-3.png) no-repeat 10px -48px;
+  color: #f00;
+  padding-left: 30px;
+  height: 32px;
+  /**width: 300px;**/
+  line-height: 32px;
+  top: 1px;
+  font-size: 12px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.prompt-right {
+  padding-left: 30px;
+  top: 1px;
+  font-size: 12px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.prompt-right-label {
+  background: url(../images/Account-3.png) no-repeat 0 2px;
+  padding-left: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.open-text .imgscode {
+  /*border: 1px solid #bebebe;*/
+  padding: 3px 0 2px;
+  display: inline-block;
+  width: 83px;
+  height: 24px;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.open-hint {
+  border: 1px solid #ecdda0;
+  padding: 5px 10px 6px 30px;
+  color: #848585;
+  background: url(../images/Account-3.png) no-repeat 10px -48px;
+}
+
+.open-text .Change-text {
+  text-decoration: none;
+  color: #a3a3a3;
+}
+
+.open-text .Change-text:hover {
+  color: #000;
+}
+
+.open-text .select-div,
+.open-text .select-div02 {
+  height: 30px;
+  border: 1px solid #bebebe;
+  padding-left: 10px;
+  font-size: 14px;
+  margin-right: 5px;
+  float: left;
+}
+
+.open-text .select-div02 {
+  width: 200px;
+}
+
+.padding-t20 {
+  padding-top: 20px;
+}
+
+.next-btns {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.next-btns2 {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.nextdiv-btns,
+.prediv-btns {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 900;
+  background: #2870c5 url(../images/ygopen-4.jpg) repeat-x left bottom;
+  cursor: pointer;
+  border: 0;
+  width: 110px;
+  border: 1px solid #1c5aa8;
+  height: 36px;
+}
+
+.prediv-btns {
+  background: #f2f0f0 url(../images/Account-7.png) repeat-x;
+  border: 1px solid #a2a2a2;
+  color: #797878;
+  margin-right: 10px;
+}
+
+.nextdiv-btns:hover {
+  color: #ff0;
+}
+
+.step-index2 {
+  border: 1px solid #c4d4e7;
+  margin-top: 34px;
+  border-radius: 2px;
+}
+
+.prompt-titles {
+  border-bottom: 1px solid #9db7d7;
+  background: #ecf3fd;
+  height: 26px;
+  line-height: 26px;
+}
+
+.prompt-titles span {
+  background: #2965b0;
+  color: #fff;
+  padding: 0 25px;
+  font-weight: 900;
+  display: inline-block;
+  border-radius: 2px 0 0 0;
+  font-size: 14px;
+  height: 26px;
+}
+
+.prompt-textheight,
+.capacity-height {
+  overflow-y: auto;
+  background: #fbfcfe;
+  padding: 20px;
+  height: 360px;
+}
+
+.capacity-height {
+  padding: 20px 0;
+  color: #000;
+  position: relative;
+}
+
+.prompt-textheight p,
+.capacity-height p {
+  padding: 3px 0;
+  text-indent: 2em;
+}
+
+.prompt-textheight strong,
+.capacity-height strong {
+  color: #000;
+}
+
+.open-checkbox {
+  text-align: center;
+  padding: 15px 0 0;
+  color: #2562ae;
+}
+
+.open-checkbox input {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.open-checkbox span {
+  color: #666666;
+  padding-left: 5px;
+}
+
+.yg-bankwrap {
+  padding: 15px 0 25px 45px;
+  color: #575757;
+  font-size: 14px;
+}
+
+.yg-bankwrap .textnums {
+  text-indent: 2em;
+}
+
+.yg-bankwrap .textnums span {
+  font-size: 20px;
+  font-weight: 900;
+  color: #2965b0;
+  position: relative;
+  top: 2px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.yg-bankdl {
+  padding: 15px 0 25px;
+}
+
+.yg-bankdl dl {
+  overflow: hidden;
+  height: 38px;
+  padding-bottom: 18px;
+  line-height: 38px;
+}
+
+.yg-bankdl dt {
+  float: left;
+  width: 198px;
+}
+
+.yg-bankdl dt input {
+  vertical-align: middle;
+}
+
+.yg-bankdl dt img {
+  width: 126px;
+  height: 36px;
+  margin-left: 8px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+}
+
+.yg-bankdl dd {
+  float: left;
+  width: 650px;
+  color: #575757;
+}
+
+.yg-bankdl .ddguide {
+  display: inline-block;
+  background: url(../images/ygopen-5.png) no-repeat;
+  width: 111px;
+  height: 27px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 27px;
+  color: #2965b0;
+  font-size: 12px;
+  margin-right: 25px;
+}
+
+.yg-bankdl .ddguide:hover {
+  color: #000;
+}
+
+.CardNo-text span {
+  display: inline-block;
+}
+
+.CardNo-text .spantext {
+  font-size: 12px;
+  color: #7f7f7f;
+  padding: 0 10px;
+}
+
+.CardNo-text p {
+  display: inline-block;
+}
+
+.succeed-twos {
+  padding-top: 20px;
+}
+
+.succeed-twos .div-succeed {
+  padding: 55px 0 55px 60px;
+  border: 1px solid #bae9cb;
+  font-size: 14px;
+  background: #f3f8f2 url(../images/Account-8.png) no-repeat 27px 54px;
+}
+
+.succeed-twos .div-Failure {
+  padding: 75px 0 75px 90px;
+  border: 1px solid #ffcece;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  background: #fff7f6 url(../images/ygopen-9.png) no-repeat 57px 77px;
+}
+
+.succeed-twos .div-Failure p {
+  font-weight: 900;
+  color: #ff5f5f;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.succeed-twos .div-succeed p {
+  font-weight: 900;
+  color: #3cae64;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.TradingClient-wrap {
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  padding: 24px 20px;
+  _height: 1%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.TradingClient-down {
+  background: url(../images/ygopen-6link.png) no-repeat;
+  padding-left: 130px;
+  height: 130px;
+  font-size: 14px;
+  margin: 16px 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
