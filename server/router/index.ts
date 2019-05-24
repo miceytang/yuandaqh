@@ -17,7 +17,7 @@ const Router: express.Router = express.Router();
 // Router.use(baseRenderUrl, RENDER_ROUTERS);
 
 Router.use(baseRenderUrl, RENDER_ROUTERS);
-// Router.use("/zhongyi", ZY_ROUTERS);
+Router.use(baseUrl, CGI_ROUTERS);
 
 /* --------- 404处理 --------- */
 Router.use(
