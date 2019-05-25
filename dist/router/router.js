@@ -9,6 +9,7 @@ const fileUpload_1 = __importDefault(require("@controllers/fileUpload"));
 // import DemoRequest from '@controllers/demoRequest';
 const Router = express_1.default.Router();
 /* --------- path: '/cgi-bin/${path}' --------- */
+Router.post("/submitUserInfo", fileUpload_1.default.submitUserInfo.bind(fileUpload_1.default));
 Router.all("/fileUpload/uploadUinFront", fileUpload_1.default.uploadUinFront.bind(fileUpload_1.default));
 Router.all("/fileUpload/uploadUinBack", fileUpload_1.default.uploadUinBack.bind(fileUpload_1.default));
 Router.all("/fileUpload/uploadBankCard", fileUpload_1.default.uploadBankCard.bind(fileUpload_1.default));

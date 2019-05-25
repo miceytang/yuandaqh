@@ -6,6 +6,10 @@ import fileUploadController from "@controllers/fileUpload";
 const Router: express.Router = express.Router();
 
 /* --------- path: '/cgi-bin/${path}' --------- */
+Router.post(
+  "/submitUserInfo",
+  fileUploadController.submitUserInfo.bind(fileUploadController)
+);
 Router.all(
   "/fileUpload/uploadUinFront",
   fileUploadController.uploadUinFront.bind(fileUploadController)
