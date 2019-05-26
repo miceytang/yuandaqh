@@ -8,7 +8,7 @@ import uploadFileService from "../../services/fileUpload/uploadFileService";
 export default class TouFang {
   static submitUserInfo(
     req: express.Request,
-    res: Response,
+    res: express.Response,
     next: express.NextFunction
   ) {
     (async () => {
@@ -16,6 +16,7 @@ export default class TouFang {
       const form = new formidable.IncomingForm();
       form.encoding = "utf-8";
       form.keepExtensions = true;
+      console.log(form.uploadDir);
       return new Promise((resolve, reject) => {
         form.parse(req, (err: any, fields: any, files: any) => {
           if (err) {
@@ -36,12 +37,14 @@ export default class TouFang {
                 throw err;
               }
               console.log("写入用户信息成功");
+              res.write("提交成功");
+              res.end();
             });
-            var retValue = {
-              code: 200,
-              msg: "提交成功"
-            };
-            return resolve(retValue);
+            // var retValue = {
+            //   code: 200,
+            //   msg: "提交成功"
+            // };
+            // return resolve(retValue);
           }
         });
       });
@@ -49,7 +52,7 @@ export default class TouFang {
   }
   static uploadUinFront(
     req: express.Request,
-    res: Response,
+    res: express.Response,
     next: express.NextFunction
   ) {
     (async () => {
@@ -80,11 +83,13 @@ export default class TouFang {
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
-            var retValue = {
-              code: 200,
-              msg: "提交成功"
-            };
-            return resolve(retValue);
+            // var retValue = {
+            //   code: 200,
+            //   msg: "提交成功"
+            // };
+            // return resolve(retValue);
+            res.write("提交成功");
+            res.end();
           }
         });
       });
@@ -92,7 +97,7 @@ export default class TouFang {
   }
   static uploadUinBack(
     req: express.Request,
-    res: Response,
+    res: express.Response,
     next: express.NextFunction
   ) {
     (async () => {
@@ -108,10 +113,12 @@ export default class TouFang {
         form.parse(req, (err: any, fields: any, files: any) => {
           if (err) {
             console.log("form.parse error", err);
-            return reject({
-              code: 100,
-              msg: "上传失败"
-            });
+            // return reject({
+            //   code: 100,
+            //   msg: "上传失败"
+            // });
+            res.write("提交失败");
+            res.end();
           } else {
             console.log("--------fields---", fields);
             console.log("--------file---", files);
@@ -123,11 +130,13 @@ export default class TouFang {
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
-            var retValue = {
-              code: 200,
-              msg: "提交成功"
-            };
-            return resolve(retValue);
+            // var retValue = {
+            //   code: 200,
+            //   msg: "提交成功"
+            // };
+            // return resolve(retValue);
+            res.write("提交成功");
+            res.end();
           }
         });
       });
@@ -136,7 +145,7 @@ export default class TouFang {
   //上传银行卡照片
   static uploadBankCard(
     req: express.Request,
-    res: Response,
+    res: express.Response,
     next: express.NextFunction
   ) {
     (async () => {
@@ -152,10 +161,8 @@ export default class TouFang {
         form.parse(req, (err: any, fields: any, files: any) => {
           if (err) {
             console.log("form.parse error", err);
-            return reject({
-              code: 100,
-              msg: "上传失败"
-            });
+            res.write("提交失败");
+            res.end();
           } else {
             console.log("--------fields---", fields);
             console.log("--------file---", files);
@@ -167,11 +174,13 @@ export default class TouFang {
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
-            var retValue = {
-              code: 200,
-              msg: "提交成功"
-            };
-            return resolve(retValue);
+            // var retValue = {
+            //   code: 200,
+            //   msg: "提交成功"
+            // };
+            // return resolve(retValue);
+            res.write("提交成功");
+            res.end();
           }
         });
       });

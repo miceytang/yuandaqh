@@ -154,6 +154,15 @@
                 font-weight: bold;
                 font-family: "宋体";
             }
+            #submit{
+                width: 150px;
+                height: 40px;
+                border: 2px solid #2b42e8b5;
+                border-radius: 5px;
+                color: #2b42e8b5;
+                font-size: 20px;
+                margin-left: 200px;
+            }
         </style>
 <script language=javascript>
     host = window.location.host;
@@ -303,28 +312,29 @@
                 <dd>
                     <input type="text" class="dd-input require" name="ImageURL2" placeholder="限制2M,格式为 jpg/bmp/jpeg/gif/png" id="ImageURL2" style="width:300px;"/>
                     <p class="prompt-right">手持银行卡</p>
-                    <div>
-                        <input id='bankCard' type="file" name="upload" multiple="multiple">
-                    </div>
+                    <img style='display: block;width:100px;height:50px'></div>
+                    <input id='bankCard' type="file" name="upload" multiple="multiple">
+                
                     <!-- <iframe src="upload2.asp?sortType=11&stype=file&Tobj=ImageURL2" scrolling="no" style="margin:20px" topmargin="0" width="100%" height="40" marginwidth="0" marginheight="0" frameborder="0" align="center"></iframe> -->
                     <p class="prompt-error" style="display: none;"></p>
                 </dd>
             </dl>
-            <div style="font-size:16px; color:#012a46; padding-left:76px; margin-top:8px;">
-                若需要专属客户经理协助协助您完成网上银行三方签约及交易软件的使用，请点击右边的《立即咨询》，会有专属客户经理为您服务！
-                <!-- <label>
-                    <input type="radio" name="help" value="1" id="RadioGroup2_0"/>需要
-                </label>
-                <label>
-                    <input name="help" type="radio" id="RadioGroup2_1" value="0" checked="checked"/>不需要
-                </label> -->
-            </div>
+           
             <!-- <div style="font-size:12px; color:#F00; padding-left:80px; margin-top:10px;">注意：交易账户开通后，账号和密码将通过手机短信的方式发送给您，请注意查收！ -->
 </div>
-            <div style="float:right; margin-top:10px;">
+            <div style="margin-top:10px;">
                     <button type="submit" id="submit" onClick="return chkForm();">提交</button>
                 <!-- <input style="margin-right:52px;" type="image" src="/static/openUser/images/zl_20.png" onClick="return chkForm();"/> -->
             </div>
+            <div style="font-size:16px; color:#012a46; padding-left:76px; margin-top:8px;">
+                    若需要专属客户经理协助协助您完成网上银行三方签约及交易软件的使用，请点击右边的《立即咨询》，会有专属客户经理为您服务！
+                    <!-- <label>
+                        <input type="radio" name="help" value="1" id="RadioGroup2_0"/>需要
+                    </label>
+                    <label>
+                        <input name="help" type="radio" id="RadioGroup2_1" value="0" checked="checked"/>不需要
+                    </label> -->
+                </div>
         </div>
         <input name="act" type="hidden" id="act" value="ok"/>
 </td></div></form>
@@ -598,9 +608,10 @@ function submitUserInfo(){
         oReq.open("POST", url, true);
         oReq.onload = function(oEvent) {
             if (oReq.status == 200) {
-                console.log('2000--------');
+                alert('提交成功');
             } else {
-                console.log('submitUserInfo error--------');
+                alert('提交失败');
+                console.log('--------提交失败----------',formData);
 
             }
         };
