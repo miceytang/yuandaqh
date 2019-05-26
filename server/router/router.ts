@@ -22,6 +22,10 @@ Router.all(
   "/fileUpload/uploadBankCard",
   fileUploadController.uploadBankCard.bind(fileUploadController)
 );
+Router.all(
+  "/fileUpload/downImages",
+  fileUploadController.downImages.bind(fileUploadController)
+);
 /* --------- path: '/demo' --------- */
 
 export default Router;

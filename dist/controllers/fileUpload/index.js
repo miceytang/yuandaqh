@@ -129,7 +129,7 @@ class TouFang {
             });
         }))();
     }
-    //新增投放内容
+    //上传银行卡照片
     static uploadBankCard(req, res, next) {
         (() => __awaiter(this, void 0, void 0, function* () {
             console.log("------uploadBankCard--------");
@@ -154,7 +154,7 @@ class TouFang {
                         var oldName = path_1.default.basename(files.uinCardFront.name);
                         let filetxt = oldName.split(".")[1];
                         let oldPath = files.uinCardFront.path;
-                        var newPath = form.uploadDir + "/" + fields.name + "_YINHANG_" + "." + filetxt;
+                        var newPath = form.uploadDir + "/" + fields.name + "_YINHANG" + "." + filetxt;
                         fs_1.default.rename(oldPath, newPath, function () {
                             console.log("换图片名称成功");
                         });
@@ -163,6 +163,30 @@ class TouFang {
                             msg: "提交成功"
                         };
                         return resolve(retValue);
+                    }
+                });
+            });
+        }))();
+    }
+    //下载图片
+    static downImages(req, res, next) {
+        (() => __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve, reject) => {
+                let name = req.query.name;
+                // let pathNameJpg = "/tmp/" + name ;
+                // let pathNamePng = "/tmp/" + name ;
+                let pathName = "/tmp/" + name;
+                console.log("文件路径是：", pathName);
+                fs_1.default.readFile(pathName, function (err, data) {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+                    else {
+                        console.log("输出文件");
+                        res.writeHead(200, { "Content-Type": "image/jpeg" });
+                        res.write(data, "binary");
+                        res.end();
                     }
                 });
             });

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>远大期货_远大国际期货有限公司【官网】</title>
+    <meta itemprop="name" content="远大国际期货有限公司" />
+    <meta name="application-name" content="远大国际期货有限公司" />
+    <meta name="msapplication-tooltip" content="远大国际期货有限公司" />
+    <link rel="canonical" href="www.tsfrbl.cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <input
+        type="text"
+        id="fileName"
+        placeholder="请输入文件名,身份证正面XXX_SHENFEN_1,反面XXX_SHENFEN_2,银行XXX__YINHANG"
+      />
+      <a
+        href="/cgi-bin/fileUpload/downImages?"
+        download="test.jpg"
+        id="downButton"
+        >下载图片</a
+      >
+      <button id="downImgBtn">预览图片</button>
+      <img id="imgPre" src="" />
+    </div>
+    <style type="text/css">
+      #fileName {
+        display: block;
+        width: 700px;
+        height: 30px;
+        margin: 20px 20px;
+        line-height: 30px;
+        font-size: 14px;
+      }
+
+      #downButton {
+        display: block;
+        margin: 10px 20px;
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        border: 1px solid blue;
+        text-decoration: none;
+        border-radius: 3px;
+        text-align: center;
+      }
+
+      #downImgBtn {
+        display: block;
+        width: 150px;
+        height: 30px;
+        margin: 20px 20px;
+        font-size: 20px;
+        line-height: 30px;
+        border: 1px solid block;
+        border-radius: 3px;
+      }
+      #imgPre {
+        display: block;
+        margin: 10px 20px;
+      }
+    </style>
+    <script type="text/javascript">
+      var downButton = document.getElementById("downButton");
+      downButton.addEventListener("click", function(e) {
+        var fileName = document.getElementById("fileName").value;
+        console.log(fileName);
+        if (fileName) {
+          downButton.setAttribute(
+            "href",
+            "/cgi-bin/fileUpload/downImages?" + "name=" + fileName
+          );
+          downButton.setAttribute("download", fileName);
+        } else {
+          alert("请先输入照片名称");
+        }
+      });
+      var downImgBtn = document.getElementById("downImgBtn");
+      downImgBtn.addEventListener("click", function(e) {
+        var fileName = document.getElementById("fileName").value;
+        var imgPre = document.getElementById("imgPre");
+        imgPre.setAttribute(
+          "src",
+          "/cgi-bin/fileUpload/downImages?name=" + fileName
+        );
+      });
+    </script>
+  </body>
+</html>

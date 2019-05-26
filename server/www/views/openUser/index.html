@@ -587,33 +587,26 @@ bankCard.addEventListener('change',function(event){
 
 function submitUserInfo(){
         var uinCardFront = document.getElementById('uinCardFront');
-        const url = 'http://127.0.0.1:3000/cgi-bin/submitUserInfo';
+        const url = '/cgi-bin/submitUserInfo';
         const userInfoForms = document.getElementById('userInfoForms');
         const submit = document.getElementById('submit');
         var formData = new FormData(document.forms.namedItem("txzl" ));
         formData.append('num', '1');
         console.log('formData is---------',formData);
 
-    var oReq = new XMLHttpRequest();
-  oReq.open("POST", url, true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-        console.log('2000--------');
-    } else {
-        console.log('2errr000--------');
+        var oReq = new XMLHttpRequest();
+        oReq.open("POST", url, true);
+        oReq.onload = function(oEvent) {
+            if (oReq.status == 200) {
+                console.log('2000--------');
+            } else {
+                console.log('submitUserInfo error--------');
 
-    }
-  };
-
-  oReq.send(formData);
-
-
-
-
+            }
+        };
+        oReq.send(formData);
         return false;
-
-        }
-    
+    }
 
 </script>
 </body>
