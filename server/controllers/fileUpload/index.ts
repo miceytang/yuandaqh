@@ -79,7 +79,7 @@ export default class TouFang {
             let filetxt = oldName.split(".")[1];
             let oldPath = files.uinCardFront.path;
             var newPath =
-              form.uploadDir + "/" + fields.name + "_SHENFEN_1" + "." + filetxt;
+              form.uploadDir + "/" + fields.name + "1" + "." + filetxt;
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
@@ -126,7 +126,7 @@ export default class TouFang {
             let filetxt = oldName.split(".")[1];
             let oldPath = files.uinCardFront.path;
             var newPath =
-              form.uploadDir + "/" + fields.name + "_SHENFEN_2" + "." + filetxt;
+              form.uploadDir + "/" + fields.name + "2" + "." + filetxt;
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
@@ -170,7 +170,7 @@ export default class TouFang {
             let filetxt = oldName.split(".")[1];
             let oldPath = files.uinCardFront.path;
             var newPath =
-              form.uploadDir + "/" + fields.name + "_YINHANG" + "." + filetxt;
+              form.uploadDir + "/" + fields.name + "3" + "." + filetxt;
             fs.rename(oldPath, newPath, function() {
               console.log("换图片名称成功");
             });
