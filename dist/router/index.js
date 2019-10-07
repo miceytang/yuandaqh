@@ -16,11 +16,12 @@ const Router = express_1.default.Router();
 // Router.use(baseUrl, CGI_ROUTERS);
 /* --------- path: '/views/*' --------- */
 // Router.use(baseRenderUrl, RENDER_ROUTERS);
-Router.use(index_1.baseRenderUrl, render_1.default);
+Router.use(index_1.viewRenderUrl, render_1.default);
 Router.use(index_1.baseUrl, router_1.default);
+Router.use(index_1.baseRenderUrl, render_1.default);
 /* --------- 404处理 --------- */
 Router.use((req, res, next) => {
-    res.redirect("http://yuandaqh.com.cn/views/index.html");
+    res.redirect("http://yuandaqh.com.cn/index.html");
     // return next(
     //   generateErr(NOT_FOUND, `访问 CGI 不存在！PATH 为 ${req.originalUrl}。`)
     // );

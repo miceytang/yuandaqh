@@ -10,7 +10,7 @@ export default class Render {
     console.log(path);
     let filePath = path.substring(1,path.length);
     filePath.replace(".html",'');
-    console.log(filePath);
+    console.log('filePath:',filePath);
 
     res.render(filePath);
   }
