@@ -14,7 +14,6 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 
 import redirectTowww from './middlewares/redirect-to-www';
-import formatHandler from './middlewares/deploy-response-format';
 import errorHandler from './middlewares/error-handle';
 import router from './router';
 
