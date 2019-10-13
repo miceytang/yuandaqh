@@ -12,6 +12,7 @@ const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const compression_1 = __importDefault(require("compression"));
+const redirect_to_www_1 = __importDefault(require("./middlewares/redirect-to-www"));
 const error_handle_1 = __importDefault(require("./middlewares/error-handle"));
 const router_1 = __importDefault(require("./router"));
 const app = express_1.default();
@@ -35,7 +36,7 @@ app.use(compression_1.default());
  * 2. 回包格式化中间件：部署请求 resolve | reject 方法
  * 3. 数据上报中间件：统计 cgi 从开始接受请求到响应完成的耗时，对错误的信息进行上报
  **/
-// app.all(`${baseUrl}/*`, timeoutHandler, formatHandler);
+app.all(`/*`, redirect_to_www_1.default);
 // 路由挂载
 app.use(router_1.default);
 // 错误处理，需要在所有路由注册完毕之后才 use

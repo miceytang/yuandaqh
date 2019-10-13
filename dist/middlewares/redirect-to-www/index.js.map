@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../server/middlewares/redirect-to-www/index.ts"],"names":[],"mappings":";;AAIA,kBAAe,CACb,GAAoB,EACpB,GAAa,EACb,IAA0B,EAC1B,EAAE;IACF,IAAI,IAAI,GAAG,GAAG,CAAC,IAAI,CAAC;IACpB,GAAG,CAAC,QAAQ,CAAC,GAAG,EAAE,4BAA4B,GAAC,IAAI,CAAC,CAAC;IACrD,OAAO,IAAI,EAAE,CAAC;AAChB,CAAC,CAAC"}
