@@ -9,6 +9,8 @@ export default (
 ) => {
   let path = req.path;
   console.log('path:',path)
-  res.redirect(301, 'http://www.yuandaqh.com.cn'+path);
+  if(req.hostname == 'yuandaqh.com.cn'){
+    res.redirect(301, 'http://www.yuandaqh.com.cn'+path);
+  }
   return next();
 };
