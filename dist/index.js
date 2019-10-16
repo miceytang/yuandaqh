@@ -36,12 +36,12 @@ app.use(compression_1.default());
  * 2. 回包格式化中间件：部署请求 resolve | reject 方法
  * 3. 数据上报中间件：统计 cgi 从开始接受请求到响应完成的耗时，对错误的信息进行上报
  **/
-app.all('/*', redirect_to_www_1.default);
+app.all(`/*`, redirect_to_www_1.default);
 // 路由挂载
 app.use(router_1.default);
 // 错误处理，需要在所有路由注册完毕之后才 use
 // 处理 系统错误 | 服务器未知错误 | 请求逻辑错误
 app.use(error_handle_1.default);
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(80, () => console.log('Example app listening on port 80!'));
 // export default app;
 //# sourceMappingURL=index.js.map

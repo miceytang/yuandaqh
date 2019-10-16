@@ -13,7 +13,7 @@ import cookieParser from 'cookie-parser';
 
 import compression from 'compression';
 
-import redirectTowww from './middlewares/redirect-to-www';
+import redirectTowww from './middlewares/redirect-to-www'
 import errorHandler from './middlewares/error-handle';
 import router from './router';
 
@@ -44,8 +44,7 @@ app.use(compression());
  * 2. 回包格式化中间件：部署请求 resolve | reject 方法
  * 3. 数据上报中间件：统计 cgi 从开始接受请求到响应完成的耗时，对错误的信息进行上报
  **/
-
-app.all('/*', redirectTowww);
+app.all(`/*`,redirectTowww);
 
 // 路由挂载
 app.use(router);
@@ -54,5 +53,5 @@ app.use(router);
 // 处理 系统错误 | 服务器未知错误 | 请求逻辑错误
 app.use(errorHandler);
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(80, () => console.log('Example app listening on port 80!'))
 // export default app;
